@@ -20,7 +20,7 @@ function App() {
       <Router className="App">
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route exact path='/' element={<Home />} />
           <Route path='/Executive-Measurements' element={<ExcMeasurements />} />
           <Route path='/Topographic-Measurements' element={<TopoMeasurements />} />
           <Route path='/Aerial-Measurements' element={<AerialMeasurements />} />
@@ -28,7 +28,7 @@ function App() {
           <Route path='/Surveying-Quarries' element={<SurveyingQuarries />} />
           <Route path='/Experience' element={<Experience />} />
           <Route path='/Models' element={<Models />} />
-          <Route path='/Contact' element={<Contact />} />
+          <Route exact path='/Contact' element={<Contact />} />
         </Routes>
         <Footer />
       </Router>
