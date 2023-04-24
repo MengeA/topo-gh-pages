@@ -43,7 +43,7 @@ export default function Navbar() {
                         <li className="nav-item"
                             onMouseEnter={onMouseEnter}
                             onMouseLeave={onMouseLeave}>
-                            <Link to="/services"
+                            <Link to="/Services"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
                                 Pakalpojumi
@@ -52,19 +52,19 @@ export default function Navbar() {
                             {dropdown && <Dropdown />}
                         </li>
                         <li className="nav-item">
-                            <Link to="experience"
+                            <Link to="Experience"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
                                 Pieredze</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/models"
+                            <Link to="/Models"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
                                 3D modeļi</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contact"
+                            <Link to="/Contact"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
                                 Kontakti</Link>
