@@ -7,7 +7,7 @@ import AerialMeasurements from './components/pages/AerialMeasurements'
 import GeodeticWorks from './components/pages/GeodeticWorks';
 import SurveyingQuarries from './components/pages/SurveyingQuarries';
 import './App.css'
-import Experience from './components/pages/experience';
+import Experience from './components/pages/Experience';
 import Models from './components/pages/models'
 import Contact from './components/pages/Contact';
 import Footer from './components/Footer';
