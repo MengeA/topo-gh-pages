@@ -17,7 +17,7 @@ function App() {
   return (
     <>
 
-      <Router basename="/topo-gh/pages" className="App">
+      <Router className="App">
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
