@@ -15,12 +15,12 @@ export default function Navbar() {
     const closeMobileMenu = () => setClick(false);
     const onMouseEnter = () => {
         window.innerWidth < 800 ? setDropdown(false) : setDropdown(true)
-      }
-    
-      const onMouseLeave = () => {
-          setDropdown(false);
-      };
-      
+    }
+
+    const onMouseLeave = () => {
+        setDropdown(false);
+    };
+
 
     return (
         <header className=" header-home  main-grid">
@@ -34,39 +34,39 @@ export default function Navbar() {
                     <button aria-label="Close navigation" onClick={showNavBar} className="nav-btn close-nav-btn"> <FaTimes /></button>
                     <ul className="nav-list">
                         <li className="nav-item ">
-                            <Link to="/" 
-                            className="nav-link"
-                            onClick={closeMobileMenu}>
+                            <Link to="/"
+                                className="nav-link"
+                                onClick={closeMobileMenu}>
                                 Sākums
                             </Link>
                         </li>
                         <li className="nav-item"
                             onMouseEnter={onMouseEnter}
                             onMouseLeave={onMouseLeave}>
-                            <Link to="/services" 
+                            <Link to="/services"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
-                                Pakalpojumi 
-                                <i className='fas fa-caret-down'/>
-                            </Link> 
-                            {dropdown && <Dropdown/>}
+                                Pakalpojumi
+                                <i className='fas fa-caret-down' />
+                            </Link>
+                            {dropdown && <Dropdown />}
                         </li>
                         <li className="nav-item">
-                            <Link to="/experience" 
+                            <Link to="experience"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
-                                    Pieredze</Link>
+                                Pieredze</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/models" 
-                            className="nav-link"
-                            onClick={closeMobileMenu}>
+                            <Link to="/models"
+                                className="nav-link"
+                                onClick={closeMobileMenu}>
                                 3D modeļi</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contact" 
-                            className="nav-link"
-                            onClick={closeMobileMenu}>
+                            <Link to="/contact"
+                                className="nav-link"
+                                onClick={closeMobileMenu}>
                                 Kontakti</Link>
                         </li>
                     </ul>
