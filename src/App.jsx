@@ -17,7 +17,7 @@ function App() {
   return (
     <>
 
-      <Router className="App">
+      <Router basename="/topo-gh/pages" className="App">
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -30,7 +30,7 @@ function App() {
           <Route path='/models' element={<Models />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </>
 
