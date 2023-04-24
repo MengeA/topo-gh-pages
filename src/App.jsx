@@ -26,9 +26,9 @@ function App() {
           <Route path='/Aerial-Measurements' element={<AerialMeasurements />} />
           <Route path='/Geodetic-Works' element={<GeodeticWorks />} />
           <Route path='/Surveying-Quarries' element={<SurveyingQuarries />} />
-          <Route path='/experience' element={<Experience />} />
-          <Route path='/models' element={<Models />} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/Experience' element={<Experience />} />
+          <Route path='/Models' element={<Models />} />
+          <Route path='/Contact' element={<Contact />} />
         </Routes>
         <Footer />
       </Router>
