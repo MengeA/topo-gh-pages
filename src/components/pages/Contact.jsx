@@ -1,22 +1,44 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser'
 import "../../App.css"
-import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
+import topoIcon from "../../assets/topo-logo.png"
+import { GoogleMap, useLoadScript, MarkerF, Marker, InfoWindow } from "@react-google-maps/api"
 
 
 export default function contact() {
 
     const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    const markerPosition = { lat: 56.530001, lng: 21.051398 };
+    const mapCenter = { lat: 56.530001, lng: 21.051398 };
+
+    const [infoWindowVisible, setInfoWindowVisible] = React.useState(true);
+    const handleMarkerClick = () => {
+        setInfoWindowVisible(true);
+    };
+
+    const handleInfoWindowClose = () => {
+        setInfoWindowVisible(false);
+    };
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: apiKey
     })
+
     function Map() {
         return (
             <>
                 <h2> Mēs atrodamies šeit</h2>
-                <GoogleMap zoom={17} center={{ lat: 56.530001, lng: 21.051398 }} mapContainerClassName="map-container">
-                    <MarkerF position={{ lat: 56.530001, lng: 21.051398 }} title={"Keep It Weird"}></MarkerF>
+                <GoogleMap zoom={17} center={mapCenter} mapContainerClassName="map-container">
+                    <MarkerF position={markerPosition} onClick={handleMarkerClick} title={"Mēs esam šeit"}></MarkerF>
+                    {infoWindowVisible && (
+                        <InfoWindow position={markerPosition} onCloseClick={handleInfoWindowClose}>
+                            <div>
+                                <img className="icon-maps" src={topoIcon} />
+                                <h4>SIA IM Latvija</h4>
+                                <p>Meldru iela 1, Liepāja, LV-3401</p>
+                            </div>
+                        </InfoWindow>
+                    )}
                 </GoogleMap>
             </>
 

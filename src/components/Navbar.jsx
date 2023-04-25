@@ -58,12 +58,6 @@ export default function Navbar() {
                                 Pieredze</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Models"
-                                className="nav-link"
-                                onClick={closeMobileMenu}>
-                                3D modeļi</Link>
-                        </li>
-                        <li className="nav-item">
                             <Link to="/Contact"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>

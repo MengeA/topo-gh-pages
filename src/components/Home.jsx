@@ -44,6 +44,7 @@ export default function Home(props){
 
                 <section className="info main-grid">
                 <Popups
+                className="col"
                 virsraksts="Topogrāfiskā uzmērīšana"
                 apraksts={<>
                             <h2 className="popup-title">Topogrāfiskā uzmērīšana</h2>
@@ -57,6 +58,7 @@ export default function Home(props){
                 handleChange={togglePopup}
                 />
                   <Popups
+                  className="col"
                 virsraksts="Izpildmērījumi"
                 apraksts={<>
                             <h2>Izpildmērījumi</h2>
@@ -70,6 +72,7 @@ export default function Home(props){
                 handleChange={togglePopup}
                 />
                  <Popups
+                 className="col"
                 virsraksts="Aerouzmērīšana"
                 apraksts={<>
                             <h2>Aerouzmērīšana</h2>
@@ -91,8 +94,9 @@ export default function Home(props){
                
                 </section>
                 
-                <section className="info main-grid">
+                <section className="info main-grid second-line">
                 <Popups
+                className="col-second"
                 virsraksts="Inženierģeodēziskie darbi"
                 apraksts={<>
                             <h2>Inženierģeodēziskie darbi</h2>
@@ -110,6 +114,7 @@ export default function Home(props){
                 />
 
                 <Popups
+                className="col-second"
                 virsraksts="Inženierģeodēziskie darbi"
                 apraksts={<>
                             <h2>Karjeru uzmērīšana</h2>

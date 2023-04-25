@@ -9,6 +9,9 @@
   height: 400px;
   margin-bottom: 3em;
 }
+.icon-maps{
+  width: 100px;
+}
 /*==============gallery===============*/
 .gallery-container {
   display: flex;

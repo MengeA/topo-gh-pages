@@ -414,19 +414,21 @@ h1, h2, strong {
     text-align: center;
 }
 
-.col {
+.col, 
+.col-second {
     grid-column: 2 / -2;
     cursor: pointer;
     margin-bottom: 3rem;
 }
+
+
 .icons-services{
     width: 50px;
     transition: transform 400ms;
 }
 .icons-services:hover{
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
-
 
 
 @media (min-width: 600px) {
@@ -438,12 +440,20 @@ h1, h2, strong {
         grid-column: 2 / span 1;
     }
 
+    .col-second{
+        margin: 0 5em;
+        margin-bottom: 3rem;
+    }
     .icons-services{
         width: 50px;
         transition: transform 400ms;
     }
     .icons-services:hover{
-        transform: translateY(-3px);
+        transform: translateY(-5px);
+    }
+    .second-line{
+        display: flex;
+        justify-content: center;
     }
 }
 
