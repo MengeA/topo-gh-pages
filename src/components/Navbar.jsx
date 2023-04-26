@@ -1,5 +1,5 @@
 import { FaBars, FaTimes } from "react-icons/fa"
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import logo from "../assets/topo-logo.png"
 import Dropdown from "./Dropdown"
 import React from "react"
@@ -20,7 +20,7 @@ export default function Navbar() {
     const onMouseLeave = () => {
         setDropdown(false);
     };
-
+ 
 
     return (
         <header className=" header-home  main-grid">

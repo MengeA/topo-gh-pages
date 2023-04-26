@@ -27,14 +27,14 @@ export default function contact() {
     function Map() {
         return (
             <>
-                <h2> Mēs atrodamies šeit</h2>
+                <h2> Mēs atrodamies šeit:</h2>
                 <GoogleMap zoom={17} center={mapCenter} mapContainerClassName="map-container">
                     <MarkerF position={markerPosition} onClick={handleMarkerClick} title={"Mēs esam šeit"}></MarkerF>
                     {infoWindowVisible && (
                         <InfoWindow position={markerPosition} onCloseClick={handleInfoWindowClose}>
                             <div>
                                 <img className="icon-maps" src={topoIcon} />
-                                <h4>SIA IM Latvija</h4>
+                                <h4>SIA "IM Latvija"</h4>
                                 <p>Meldru iela 1, Liepāja, LV-3401</p>
                             </div>
                         </InfoWindow>
@@ -63,11 +63,11 @@ export default function contact() {
         <>
             <div>
                 <main className="main-template main-grid ">
-                    <h1 className="page-title">Sazinies ar mums</h1>
+                    <h1 className="page-title title-small-screen">Sazinies ar mums</h1>
 
 
-                    <div className="contact-area">
-                        <form className="contact-form" ref={form} onSubmit={sendEmail} action="#" method="POST">
+                    <div className="contact-area ">
+                        <form className="contact-form  " ref={form} onSubmit={sendEmail} action="#" method="POST">
 
                             <label className="fname-label" htmlFor="fname"> Vārds</label>
                             <input className="fname-input" id="fname" type="text" name='user_name' />
@@ -82,7 +82,7 @@ export default function contact() {
                         </form>
                         <p className="contact-text">
                             Vari sazināties ar mums aizpildot šo formu, vai zvanīt <strong>  +371 29982262 </strong>, kā arī rakstīt
-                            e-pastā uz <strong> info@topo.lv </strong>e-pastā uz info@topo.lv un mēs ar Jums sazināsimies tuvākajā laikā.
+                            e-pastā uz <strong> info@topo.lv </strong> un mēs ar Jums sazināsimies tuvākajā laikā.
                         </p>
                     </div>
 

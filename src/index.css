@@ -12,6 +12,10 @@ body {
 img {
     max-width: 100%;
 }
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+  }
 
 /* ==================
     Typography
@@ -33,10 +37,17 @@ h1, h2, strong {
 }
 
 .page-title {
-    font-size: 3rem;
-    margin-bottom: .5em;
+    font-size: 2.3rem;
+    margin-bottom: 1em;
     justify-self: center;
 }
+.title-small-screen{
+    font-size: 1.7em;
+}
+.wide{
+    font-size: 1.5em;
+}
+
 
 .page-title::after {
     content: '';
@@ -47,9 +58,19 @@ h1, h2, strong {
     margin-top: -40px;
     margin-left: 15px;
 }
+.title-small-screen::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 12px;
+    background: #FFE600;
+    margin-top: -20px;
+    margin-left: 0px;
+
+}
 
 .subtitle {
-    margin: .5em 0 3em;
+    margin: 1.5em 0 3em;
     font-size: 1.3rem;
     color: #FFE600;
     text-align: center;
@@ -146,6 +167,21 @@ h1, h2, strong {
         grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 400px)) minmax(1em, 1fr);
         
     }
+    .page-title {
+        font-size: 3rem;
+        margin-bottom: .5em;
+        justify-self: center;
+    }
+    .title-small-screen::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 25px;
+        background: #FFE600;
+        margin-top: -35px;
+        margin-left: 15px;
+    
+    }
 }
 
 /* navigation */
@@ -166,7 +202,7 @@ h1, h2, strong {
 .header-content {
     display: flex;
     grid-column: 1 / -1;
-    margin-right: 4rem;
+    margin-right: 2rem;
 }
 
 .logo-link {
@@ -197,12 +233,15 @@ h1, h2, strong {
     transform: translateX(0%);
     transition: transform 500ms;
     background-color: #FFE600;
+    z-index: 1;
+    
 }
 
 .responsive_nav {
     
     background-color: #FFE600;
     transform: translateX(-100%);
+    z-index: 1;
     
 }
 
@@ -213,8 +252,9 @@ h1, h2, strong {
     padding: 0;
     height: 100%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
+    /* overflow: hidden; */
 }
 
 .nav-link {
@@ -259,6 +299,11 @@ h1, h2, strong {
 
 
 @media (min-width: 640px) {
+    .header-content {
+        display: flex;
+        grid-column: 1 / -1;
+        margin-right: 4rem;
+    }
     .open-nav-btn,
     .close-nav-btn {
         display: none;
@@ -299,21 +344,20 @@ h1, h2, strong {
     padding: 3em 0;
     text-align: center;
     grid-template-areas:
-        ". props ."
-        ". contacts ."
-        ". member . ";
+        ". props . "
+        ". contacts . "
+        " . member . ";
 }
 
-.footer-contacts,
-.social-list {
-    grid-column: 2 / -2;
+.footer-contacts {
+    grid-column: 1 / -1;
 }
 
 .footer-logo,
 .footer-text,
 .footer-fineprint,
 .footer-assoc-member {
-    opacity: .3;
+    opacity: .5;
 }
 
 .footer-contacts {
@@ -362,10 +406,6 @@ h1, h2, strong {
       text-align: left;
   }
     
-    
-    .social-list {
-        justify-content: flex-end;
-    }
     .footer-text{
       line-height: 1.2;
     }
@@ -381,7 +421,7 @@ h1, h2, strong {
     background-image:linear-gradient(0deg, rgba(255 255 255 / 20%), rgba(97, 96, 97, 0.7)), url(assets/background_vintage.jpg);
     background-size: cover;
     background-position: top;
-    padding: 8em 0 4em;
+    padding: 9em 0 7em;
     color: rgb(35,31,32);
 }
 
@@ -394,7 +434,7 @@ h1, h2, strong {
 @media (min-width: 600px) {
     
     .hero {
-        padding: 10em 0 5em;
+        padding: 10em 0 8em;
         margin-bottom: 3rem;
     }
     
@@ -414,13 +454,19 @@ h1, h2, strong {
     text-align: center;
 }
 
-.col, 
-.col-second {
-    grid-column: 2 / -2;
+.col {
     cursor: pointer;
     margin-bottom: 3rem;
+    
+}
+.col-second {
+    margin-bottom: 6rem;
+    
 }
 
+.col:first-child{
+    padding-top: 3em;
+}
 
 .icons-services{
     width: 50px;
@@ -428,21 +474,24 @@ h1, h2, strong {
 }
 .icons-services:hover{
     transform: translateY(-5px);
+
+}
+.first-line,
+.second-line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 @media (min-width: 600px) {
-    .col {
-        grid-column: span 1;
-    }
     
-    .col:first-child {
-        grid-column: 2 / span 1;
+    .col{
+        justify-content: space-between;
     }
-
     .col-second{
-        margin: 0 5em;
-        margin-bottom: 3rem;
+        margin: 0 6em;
+        margin-bottom: 6rem;
     }
     .icons-services{
         width: 50px;
@@ -451,10 +500,20 @@ h1, h2, strong {
     .icons-services:hover{
         transform: translateY(-5px);
     }
-    .second-line{
+    .second-line,
+    .first-line{
         display: flex;
-        justify-content: center;
+        flex-direction: row;
     }
+    .second-line{
+        justify-content: center;
+       
+    }
+    
+    .first-line{
+        justify-content:space-around;
+    }
+   
 }
 
 
@@ -463,7 +522,7 @@ h1, h2, strong {
 ===================== */
 
 .main-template {
-    padding: 4em 0;
+    padding: 6em 0;
 }
 
 .main-template > * {
@@ -496,7 +555,7 @@ h1, h2, strong {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-width: 400px;
+    min-width: 250px;
     margin: auto 0;
 }
 .contact-area{
@@ -505,7 +564,7 @@ h1, h2, strong {
     padding: 3rem 0;
 }
 .contact-text{
-    min-width: 300px;
+    min-width: 250px;
     max-width: 500px;
     margin: auto 0;
     padding: 2rem;
@@ -594,22 +653,45 @@ textarea {
   /*==============================Experience-page================================*/
 
   .experience-year{
-    padding: 0.5em 1em;
+    padding: 0.2em 0.8em;
     font-weight: 700;
-    margin-top: 0.5em;
+    margin: 3em  auto 0;
     text-decoration: none;
     border: 0;
     background:#FFE600;
-    width:140px;
+    width:120px;
     border-radius: 10px;
+  }
+  .experience-card{
+    background-color: white;
+    box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem;
+    transition: box-shadow 0.3s;
+  }
+  .card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s;
+    width: 270px;
+    height: 230px;
+
+    
+  }
+  
+  .card:hover {
+    box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   .list-items-experience{
     text-align: left;
     line-height: 2rem;
   }
-
-
+ 
   @media (min-width: 600px) {
     .experience-sections{
         display:flex;
@@ -619,46 +701,58 @@ textarea {
         margin-top: 3em;
     
     }
+    .card {
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: box-shadow 0.3s;
+        width: 270px;
+        height: 230px;
+    
+        
+      }
+
     .experience-info{
         width:50%
     }
+    .experience-year{
+        padding: 0.5em 1em;
+        font-weight: 700;
+        margin-top: 0.5em;
+        text-decoration: none;
+        border: 0;
+        width:140px;
+        border-radius: 10px;
+      }
  
   }
-
-
-    .page {
-        display: grid;
-        padding-top: 6em;
-        width: 100%;
-        height: 250px;
-        grid-template-areas:
-          " . head head head ."
-          " . nav  main main ."
-          " . nav  foot foot .";
-        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 400px)) minmax(1em, 1fr);
-      }
-      
-      .page > h1 {
-        grid-area: head;
-        background-color: #8ca0ff;
-      }
-      
-      .page > nav {
-        grid-area: nav;
-        background-color: #ffa08c;
-      }
-      
-      .page > main {
-        grid-area: main;
-        background-color: #ffff64;
-      }
-      
-      .page > footer {
-        grid-area: foot;
-        background-color: #8cffa0;
-      }
-
       /*===================================================DROPDOWN PAGES==============================*/
+      .dropdown-pages:first-child{
+        padding-top: 6em;
+      }
+      
+      .dropdown-pages{
+        padding-top: 3em;
+        grid-template-areas: 
+        ". page-title page-title page-title ."
+        ". services-list services-list services-list . "
+        " . services-img services-img services-img . ";
+        margin-bottom: 2em;
+        
+     
+    }
+    .services-img{
+        grid-area: services-img;
+        margin: auto 0;
+        
+        
+    }
+    .services-list{
+        grid-area: services-list;
+        margin: 2em 0;
+        
+    }
       @media (min-width: 600px) {
         .dropdown-pages{
             padding-top: 4em;

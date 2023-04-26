@@ -10,6 +10,7 @@ import './App.css'
 import Experience from './components/pages/Experience';
 import Contact from './components/pages/Contact';
 import Footer from './components/Footer';
+import Services from './components/pages/Services';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home />} />
+          <Route path='/Services' element={<Services />} />
           <Route path='/Executive-Measurements' element={<ExcMeasurements />} />
           <Route path='/Topographic-Measurements' element={<TopoMeasurements />} />
           <Route path='/Aerial-Measurements' element={<AerialMeasurements />} />

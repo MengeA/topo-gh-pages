@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../App.css"
+
 import Gallery from '../Gallery';
 
 
@@ -9,9 +9,9 @@ export default function Experience() {
     <div>
 
       <main className="main-template main-grid">
-        <h1 className=" page-title experience-title">Mūsu projekti</h1>
+        <h1 className=" page-title title-small-screen">Mūsu projekti</h1>
         <div className='experience-sections' >
-          <section className='experience-info'>
+          <section className='experience-info experience-card'>
             <p className='experience-year'>2017.gads</p>
             <ul>
               <li className="list-items-experience">Vaiņodes pilsētas apgaismojuma līniju uzmērīšana</li>
@@ -20,7 +20,7 @@ export default function Experience() {
               <li className="list-items-experience">Ģeodēziskie darbi veikala IKEA būvniecībā Stopiņu novadā</li>
             </ul>
           </section>
-          <section className='experience-info'>
+          <section className='experience-info experience-card'>
             <p className='experience-year'>2016.gads</p>
             <ul>
               <li className="list-items-experience">Vaiņodes novada pašvaldības autoceļu topogrāfiskā uzmērīšana</li>
@@ -30,7 +30,7 @@ export default function Experience() {
           </section>
         </div>
         <div className='experience-sections'>
-          <section className='experience-info'>
+          <section className='experience-info experience-card'>
             <p className='experience-year'>2015.gads</p>
             <ul>
               <li className="list-items-experience">Ģeodēziskie darbi Liepājas Valsts tehnikuma rekonstrukcijā.</li>
@@ -39,7 +39,7 @@ export default function Experience() {
               <li className="list-items-experience">Ģeodēziskie darbi Liepājas RAS Atkritumu poligona atkritumu šķirošanas ceha būvniecībā</li>
             </ul>
           </section>
-          <section className='experience-info'>
+          <section className='experience-info experience-card'>
             <p className='experience-year'>2014.gads</p>
             <ul>
               <li className="list-items-experience">Ģeodēziskie darbi Liepājas Valsts tehnikuma rekonstrukcijā.</li>

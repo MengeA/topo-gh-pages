@@ -6,6 +6,7 @@ import droneIcon from "../../src/assets/drone.png"
 import compassIcon from "../../src/assets/compass.png"
 import mechanicDiggerIcon from "../../src/assets/mechanic-digger.png"
 import Popups from "./popups";
+import Slide from 'react-reveal/Slide';
 
 
 
@@ -21,6 +22,7 @@ export default function Home(props) {
         setPopupText(text);
         setShowPopup(!showPopup);
     };
+  
 
 
 
@@ -37,28 +39,35 @@ export default function Home(props) {
                 )}
 
                 <section className="hero main-grid">
-                    <h1 className="page-title"> MĒRNIECĪBAS PAKALPOJUMI </h1>
+                    <h1 className="page-title title-small-screen"> MĒRNIECĪBAS PAKALPOJUMI </h1>
                     <p className="subtitle">NEVAINOJAMA PRECIZITĀTE KATRĀ MĒRIJUMĀ</p>
                     <a href="/contact" className="btn btn-primary">Sazināties</a>
                 </section>
 
-                <section className="info main-grid">
+                <section className="info main-grid first-line">
+                    <Slide right>
                     <Popups
-                        className="col"
-                        virsraksts="Topogrāfiskā uzmērīšana"
-                        apraksts={<>
-                            <h2 className="popup-title">Topogrāfiskā uzmērīšana</h2>
-                            <ul>
-                                <li className="list-items">Topogrāfiskā uzmērīšana un plānu izgatavošana atbilstoši Ministru kabineta noteikumiem Nr. 281 ” Augstas detalizācijas topogrāfiskās informācijas un tās centrālās datu bāzes noteikumi”  un vietējo pašvaldību saistošajiem noteikumiem</li>
-                                <li className="list-items">Topogrāfiskā uzmērīšana pēc klientu vēlmēm dažādos mērogos ( 1:250, 1:500, 1:1000 un 1:2000)</li>
-                                <li className="list-items">Pazemes komunikāciju uzmērīšana un saskaņošana</li>
-                            </ul>
-                        </>}
-                        img={topoIcon}
-                        handleChange={togglePopup}
-                    />
+                            className="col card"
+                            virsraksts="Topogrāfiskā uzmērīšana"
+                            apraksts={<>
+                                <h2>Topogrāfiskā uzmērīšana</h2>
+                                <ul>
+                                    <li className="list-items">Topogrāfiskā uzmērīšana un plānu izgatavošana atbilstoši Ministru kabineta noteikumiem Nr. 281 ” Augstas detalizācijas topogrāfiskās informācijas un tās centrālās datu bāzes noteikumi”  un vietējo pašvaldību saistošajiem noteikumiem</li>
+                                    <li className="list-items">Topogrāfiskā uzmērīšana pēc klientu vēlmēm dažādos mērogos ( 1:250, 1:500, 1:1000 un 1:2000)</li>
+                                    <li className="list-items">Pazemes komunikāciju uzmērīšana un saskaņošana</li>
+                                </ul>
+                            </>}
+                            img={topoIcon}
+                            handleChange={togglePopup}
+                        />
+
+                    </Slide>
+                       
+
+
+                    <Slide right>
                     <Popups
-                        className="col"
+                        className="col card"
                         virsraksts="Izpildmērījumi"
                         apraksts={<>
                             <h2>Izpildmērījumi</h2>
@@ -71,32 +80,40 @@ export default function Home(props) {
                         img={bricksIcon}
                         handleChange={togglePopup}
                     />
-                    <Popups
-                        className="col"
-                        virsraksts="Aerouzmērīšana"
-                        apraksts={<>
-                            <h2>Aerouzmērīšana</h2>
-                            <ul>
-                                <li className="list-items">Augstas izšķirtspējas ortofokartes;</li>
-                                <li className="list-items">Zemes virsmas (reljefa) modeļu izgatavošana;</li>
-                                <li className="list-items">Tilpumu aprēķini karjeros;</li>
-                                <li className="list-items">Materiālu tilpumu aprēķini</li>
-                                <li className="list-items">Būvlaukumu fotofiksācija un būvniecības procesa monitorings;</li>
-                                <li className="list-items">Lauksaimniecības īpašumu apsekošana;</li>
-                                <li className="list-items">Mežsaimniecības īpašumu apsekošana;</li>
-                                <li className="list-items">Teritorijas plānošana;</li>
-                                <li className="list-items">Grūti pieejamu objektu apsekošana / inspekcija (tilti, skursteņi, masti un tml).</li>
-                            </ul>
-                        </>}
-                        img={droneIcon}
-                        handleChange={togglePopup}
-                    />
+
+                    </Slide>
+                   
+                    <Slide right>
+                        <Popups
+                            className="col card"
+                            virsraksts="Aerouzmērīšana"
+                            apraksts={<>
+                                <h2>Aerouzmērīšana</h2>
+                                <ul>
+                                    <li className="list-items">Augstas izšķirtspējas ortofokartes;</li>
+                                    <li className="list-items">Zemes virsmas (reljefa) modeļu izgatavošana;</li>
+                                    <li className="list-items">Tilpumu aprēķini karjeros;</li>
+                                    <li className="list-items">Materiālu tilpumu aprēķini</li>
+                                    <li className="list-items">Būvlaukumu fotofiksācija un būvniecības procesa monitorings;</li>
+                                    <li className="list-items">Lauksaimniecības īpašumu apsekošana;</li>
+                                    <li className="list-items">Mežsaimniecības īpašumu apsekošana;</li>
+                                    <li className="list-items">Teritorijas plānošana;</li>
+                                    <li className="list-items">Grūti pieejamu objektu apsekošana / inspekcija (tilti, skursteņi, masti un tml).</li>
+                                </ul>
+                            </>}
+                            img={droneIcon}
+                            handleChange={togglePopup}
+                        />
+
+
+                    </Slide>
 
                 </section>
 
-                <section className="info main-grid second-line">
+                <section className=" main-grid second-line">
+                    <Slide left>
                     <Popups
-                        className="col-second"
+                        className="col-second card"
                         virsraksts="Inženierģeodēziskie darbi"
                         apraksts={<>
                             <h2>Inženierģeodēziskie darbi</h2>
@@ -113,22 +130,28 @@ export default function Home(props) {
                         handleChange={togglePopup}
                     />
 
-                    <Popups
-                        className="col-second"
-                        virsraksts="Karjeru uzmērīšana"
-                        apraksts={<>
-                            <h2>Karjeru uzmērīšana</h2>
-                            <p>Izmantojot gan bezpilotu lidaparātus, gan klasiskās uzmērīšanas metodes varam veikt:</p>
-                            <ul>
-                                <li className="list-items">Tilpumu aprēķinus karjeros;</li>
-                                <li className="list-items">Materiālu tilpumu aprēķinus;</li>
-                                <li className="list-items">Būvju, fasāžu un citu elementu 3D uzmērīšanu projektēšanas/restaurācijas vajadzībām;</li>
-                                <li className="list-items">Zemes virsmas / reljefa (DSM/DTM) modeļu izgatavošanu;</li>
-                            </ul>
-                        </>}
-                        img={mechanicDiggerIcon}
-                        handleChange={togglePopup}
-                    />
+                    </Slide>
+                    
+                    <Slide left>
+                        <Popups
+                            className="col-second card"
+                            virsraksts="Karjeru uzmērīšana"
+                            apraksts={<>
+                                <h2>Karjeru uzmērīšana</h2>
+                                <p>Izmantojot gan bezpilotu lidaparātus, gan klasiskās uzmērīšanas metodes varam veikt:</p>
+                                <ul>
+                                    <li className="list-items">Tilpumu aprēķinus karjeros;</li>
+                                    <li className="list-items">Materiālu tilpumu aprēķinus;</li>
+                                    <li className="list-items">Būvju, fasāžu un citu elementu 3D uzmērīšanu projektēšanas/restaurācijas vajadzībām;</li>
+                                    <li className="list-items">Zemes virsmas / reljefa (DSM/DTM) modeļu izgatavošanu;</li>
+                                </ul>
+                            </>}
+                            img={mechanicDiggerIcon}
+                            handleChange={togglePopup}
+                        />
+
+                    </Slide>
+                    
 
                 </section>
 
