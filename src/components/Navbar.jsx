@@ -9,10 +9,18 @@ export default function Navbar() {
     const navRef = useRef();
 
     function showNavBar() {
+        setClick(!click);
         return navRef.current.classList.toggle("responsive_nav");
     }
     const [dropdown, setDropdown] = React.useState(false);
-    const closeMobileMenu = () => showNavBar();
+    const [click, setClick] = React.useState(false);
+    
+    const closeMobileMenu = () => {
+        setClick(false);
+        return navRef.current.classList.remove("responsive_nav");
+    
+    }
+
     const onMouseEnter = () => {
         window.innerWidth < 800 ? setDropdown(false) : setDropdown(true)
     }
