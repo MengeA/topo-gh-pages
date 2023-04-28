@@ -7,7 +7,7 @@ import compassIcon from "../../src/assets/compass.png"
 import mechanicDiggerIcon from "../../src/assets/mechanic-digger.png"
 import Popups from "./popups";
 import Slide from 'react-reveal/Slide';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -22,7 +22,7 @@ export default function Home(props) {
         setPopupText(text);
         setShowPopup(!showPopup);
     };
-  
+
 
 
 
@@ -41,12 +41,12 @@ export default function Home(props) {
                 <section className="hero main-grid">
                     <h1 className="page-title title-small-screen"> MĒRNIECĪBAS PAKALPOJUMI </h1>
                     <p className="subtitle">NEVAINOJAMA PRECIZITĀTE KATRĀ MĒRIJUMĀ</p>
-                    <a href="/contact" className="btn btn-primary">Sazināties</a>
+                    <Link to="Contact" className="btn btn-primary">Sazināties</Link>
                 </section>
 
                 <section className="info main-grid first-line">
                     <Slide right>
-                    <Popups
+                        <Popups
                             className="col card"
                             virsraksts="Topogrāfiskā uzmērīšana"
                             apraksts={<>
@@ -62,27 +62,27 @@ export default function Home(props) {
                         />
 
                     </Slide>
-                       
+
 
 
                     <Slide right>
-                    <Popups
-                        className="col card"
-                        virsraksts="Izpildmērījumi"
-                        apraksts={<>
-                            <h2>Izpildmērījumi</h2>
-                            <ul>
-                                <li className="list-items">Jaunizbūvēto komunikāciju ģeodēziskā piesaiste un izpildmērījumu plāna izgatavošana atbilstoši Ministru kabineta noteikumiem Nr. 281 ” Augstas detalizācijas topogrāfiskās informācijas un tās centrālās datu bāzes noteikumi”;</li>
-                                <li className="list-items">Jaunizbūvēto virszemes objektu, kā arī citu nestandarta izpildshēmu izgatavošana;</li>
-                                <li className="list-items">Jaunizbūvēto būvju izpildmērījumi, tai skaitā vertikālie uzmērījumi, saskaņā ar vietējo pašvaldību prasībām;</li>
-                            </ul>
-                        </>}
-                        img={bricksIcon}
-                        handleChange={togglePopup}
-                    />
+                        <Popups
+                            className="col card"
+                            virsraksts="Izpildmērījumi"
+                            apraksts={<>
+                                <h2>Izpildmērījumi</h2>
+                                <ul>
+                                    <li className="list-items">Jaunizbūvēto komunikāciju ģeodēziskā piesaiste un izpildmērījumu plāna izgatavošana atbilstoši Ministru kabineta noteikumiem Nr. 281 ” Augstas detalizācijas topogrāfiskās informācijas un tās centrālās datu bāzes noteikumi”;</li>
+                                    <li className="list-items">Jaunizbūvēto virszemes objektu, kā arī citu nestandarta izpildshēmu izgatavošana;</li>
+                                    <li className="list-items">Jaunizbūvēto būvju izpildmērījumi, tai skaitā vertikālie uzmērījumi, saskaņā ar vietējo pašvaldību prasībām;</li>
+                                </ul>
+                            </>}
+                            img={bricksIcon}
+                            handleChange={togglePopup}
+                        />
 
                     </Slide>
-                   
+
                     <Slide right>
                         <Popups
                             className="col card"
@@ -112,26 +112,26 @@ export default function Home(props) {
 
                 <section className=" main-grid second-line">
                     <Slide left>
-                    <Popups
-                        className="col-second card"
-                        virsraksts="Inženierģeodēziskie darbi"
-                        apraksts={<>
-                            <h2>Inženierģeodēziskie darbi</h2>
-                            <ul>
-                                <li className="list-items">Būvasu nospraušana;</li>
-                                <li className="list-items">Deformāciju kontrole;</li>
-                                <li className="list-items">Novietnes kontroles mērījumi;</li>
-                                <li className="list-items">Ģeodēzisko atbalsta tīklu ierīkošana un uzmērīšana</li>
-                                <li className="list-items">Inženierbūvju deformācijas kontrole (monitorings).;</li>
-                                <li className="list-items">Citi inženierģeodēziskie darbi pēc klienta vēlmēm;</li>
-                            </ul>
-                        </>}
-                        img={compassIcon}
-                        handleChange={togglePopup}
-                    />
+                        <Popups
+                            className="col-second card"
+                            virsraksts="Inženierģeodēziskie darbi"
+                            apraksts={<>
+                                <h2>Inženierģeodēziskie darbi</h2>
+                                <ul>
+                                    <li className="list-items">Būvasu nospraušana;</li>
+                                    <li className="list-items">Deformāciju kontrole;</li>
+                                    <li className="list-items">Novietnes kontroles mērījumi;</li>
+                                    <li className="list-items">Ģeodēzisko atbalsta tīklu ierīkošana un uzmērīšana</li>
+                                    <li className="list-items">Inženierbūvju deformācijas kontrole (monitorings).;</li>
+                                    <li className="list-items">Citi inženierģeodēziskie darbi pēc klienta vēlmēm;</li>
+                                </ul>
+                            </>}
+                            img={compassIcon}
+                            handleChange={togglePopup}
+                        />
 
                     </Slide>
-                    
+
                     <Slide left>
                         <Popups
                             className="col-second card"
@@ -151,7 +151,7 @@ export default function Home(props) {
                         />
 
                     </Slide>
-                    
+
 
                 </section>
 

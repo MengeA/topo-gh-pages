@@ -20,7 +20,7 @@ export default function Navbar() {
     const onMouseLeave = () => {
         setDropdown(false);
     };
- 
+
 
     return (
         <header className=" header-home  main-grid">
@@ -43,7 +43,7 @@ export default function Navbar() {
                         <li className="nav-item"
                             onMouseEnter={onMouseEnter}
                             onMouseLeave={onMouseLeave}>
-                            <Link to="/Services"
+                            <Link to="Services"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
                                 Pakalpojumi
@@ -58,7 +58,7 @@ export default function Navbar() {
                                 Pieredze</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Contact"
+                            <Link to="Contact"
                                 className="nav-link"
                                 onClick={closeMobileMenu}>
                                 Kontakti</Link>

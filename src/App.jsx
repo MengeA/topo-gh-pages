@@ -1,6 +1,7 @@
 import Home from './components/Home'
+import React from "react"
 import Navbar from './components/Navbar'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import ExcMeasurements from "./components/pages/ExecutiveMeasurements"
 import TopoMeasurements from "./components/pages/TopographicMeasurements"
 import AerialMeasurements from './components/pages/AerialMeasurements'
