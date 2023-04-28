@@ -49,6 +49,7 @@ h1, h2, strong {
 }
 
 
+
 .page-title::after {
     content: '';
     display: block;
@@ -651,7 +652,13 @@ textarea {
 
 
   /*==============================Experience-page================================*/
-
+  .experience-sections {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 100%;
+    margin-top: 3em;
+}
   .experience-year{
     padding: 0.2em 0.8em;
     font-weight: 700;
@@ -666,7 +673,7 @@ textarea {
     background-color: white;
     box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     margin: 1rem;
     transition: box-shadow 0.3s;
   }
@@ -694,9 +701,9 @@ textarea {
  
   @media (min-width: 600px) {
     .experience-sections{
-        display:flex;
-        min-width: 300px;
-        width:90%;
+        flex-direction: row;
+        min-width: 400px;
+        width:100%;
         margin: 0 auto;
         margin-top: 3em;
     
@@ -728,8 +735,8 @@ textarea {
  
   }
       /*===================================================DROPDOWN PAGES==============================*/
-      .dropdown-pages:first-child{
-        padding-top: 6em;
+      .first-title{
+        padding-top: 2em;
       }
       
       .dropdown-pages{

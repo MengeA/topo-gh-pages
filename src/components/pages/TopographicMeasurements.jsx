@@ -4,8 +4,8 @@ import Slide from 'react-reveal/Slide';
 
 export default function TopographicMeasurements() {
   return (
-    <section className="dropdown-pages main-grid">
-    <h1 className="page-title title-small-screen"> TOPOGRĀFISKĀ UZMĒRĪŠANA </h1>
+    <section className="dropdown-pages main-grid ">
+    <h1 className="page-title title-small-screen first-title"> TOPOGRĀFISKĀ UZMĒRĪŠANA </h1>
     <Slide left>
     <img className="services-img"src={Img1}></img>
     </Slide>
