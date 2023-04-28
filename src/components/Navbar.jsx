@@ -1,9 +1,9 @@
 import { FaBars, FaTimes } from "react-icons/fa"
-import { useRef, useEffect } from "react"
+import { useRef } from "react"
 import logo from "../assets/topo-logo.png"
 import Dropdown from "./Dropdown"
 import React from "react"
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const navRef = useRef();
@@ -12,7 +12,7 @@ export default function Navbar() {
         return navRef.current.classList.toggle("responsive_nav");
     }
     const [dropdown, setDropdown] = React.useState(false);
-    const closeMobileMenu = () => setClick(false);
+    const closeMobileMenu = () => showNavBar();
     const onMouseEnter = () => {
         window.innerWidth < 800 ? setDropdown(false) : setDropdown(true)
     }
