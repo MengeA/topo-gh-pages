@@ -139,6 +139,7 @@ h1, h2, strong {
 
 .btn-form {
     align-self: end;
+    cursor: pointer;
 }
 .button-popup {
     position: absolute;
@@ -569,6 +570,16 @@ h1, h2, strong {
     max-width: 500px;
     margin: auto 0;
     padding: 2rem;
+}
+.success-message{
+    color: green;
+}
+.error-message{
+    color: red;
+}
+.success-message,
+.error-message{
+    margin: 0
 }
 
 @media (min-width: 600px) {
